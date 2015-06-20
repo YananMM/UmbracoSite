@@ -7,9 +7,7 @@
         <section>
             <h2>@Umbraco.Field("pageTitle")</h2>
             <p>@Umbraco.Field("pageContent")</p>
-		@*@Umbraco.RenderMacro("ListArticles")*@
-        <h3>using partial view to list article title</h3>
-		@*@Umbraco.RenderMacro("test")*@
+		@Umbraco.RenderMacro("listChildren")
         </section>  
     </div> <!-- #main -->
 </div> <!-- #main-container -->
