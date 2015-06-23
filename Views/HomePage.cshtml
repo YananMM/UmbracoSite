@@ -17,26 +17,12 @@
                 </div>
 			</div>
 			<article>
-				<header>
-					@Umbraco.Field("bodyText")
-				</header>
-				<section>
-					<h2>Site Owners</h2>
-					<p>With Umbraco it's incredibly easy to manage your site and focus on producing great content.</p>
-				</section>
-				<section>
-					<h2>Designers</h2>
-					<p>Don't fear Umbraco, as it won't interfere with your beautiful CSS & HTML markup.</p>
-				</section>
-				<footer>
-					<h3>Developers</h3>
-					<p>Rapidly build your website using Umbraco with powerful API's and easy extensibility.</p>
-				</footer>
+				@Umbraco.Field("pageContent")
+				
 			</article>
 			
 			<aside>
-				<h3>Why Umbraco?</h3>
-				<p>Umbraco is easy to learn and use, making it perfect for web designers, developers and content creators alike.</p>
+				@Umbraco.Field("sidebar")
 			</aside>
 			
 		</div> <!-- #main -->

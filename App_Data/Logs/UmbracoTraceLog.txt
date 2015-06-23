@@ -3196,3 +3196,21 @@ System.Data.Entity.Migrations.Infrastructure.AutomaticMigrationsDisabledExceptio
 2015-06-23 15:27:43,159 [40] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T42/D6] Executing Umbraco RouteDefinition controller
 2015-06-23 15:27:43,172 [40] INFO  Umbraco.Web.Mvc.UmbracoPageResult - [T42/D6] Finished (took 12ms)
 2015-06-23 15:28:29,661 [40] INFO  umbraco.BusinessLogic.Log - [T54/D6] Log scrubbed.  Removed all items older than 2015-04-24 15:28:29
+2015-06-23 15:35:17,586 [40] INFO  Umbraco.Core.Security.UmbracoMembershipProviderBase - [T59/D6] Login attempt succeeded for username yananfun@outlook.com from IP address 127.0.0.1
+2015-06-23 15:35:17,673 [40] INFO  Umbraco.Web.Security.WebSecurity - [T59/D6] User Id: 0 logged in
+2015-06-23 15:35:18,633 [40] INFO  Umbraco.Core.PluginManager - [T59/D6] Starting resolution types of umbraco.interfaces.IApplication
+2015-06-23 15:35:18,675 [40] INFO  Umbraco.Core.PluginManager - [T59/D6] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 42ms)
+2015-06-23 15:35:30,962 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Starting resolution types of umbraco.interfaces.ITree
+2015-06-23 15:35:30,970 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Completed resolution of types of umbraco.interfaces.ITree, found 35 (took 7ms)
+2015-06-23 15:35:30,989 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Starting resolution types of Umbraco.Web.Trees.TreeController
+2015-06-23 15:35:31,003 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Completed resolution of types of Umbraco.Web.Trees.TreeController, found 4 (took 13ms)
+2015-06-23 15:35:31,007 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Starting resolution types of umbraco.interfaces.ITree
+2015-06-23 15:35:31,022 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Completed resolution of types of umbraco.interfaces.ITree, found 19 (took 15ms)
+2015-06-23 15:36:51,801 [40] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T54/D6] Content 'Home' with Id '1052' has been published.
+2015-06-23 15:36:51,881 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Starting resolution types of umbraco.interfaces.ICacheRefresher
+2015-06-23 15:36:51,899 [40] INFO  Umbraco.Core.PluginManager - [T54/D6] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 20 (took 17ms)
+2015-06-23 15:36:56,031 [40] INFO  umbraco.content - [T45/D6] Save Xml to file...
+2015-06-23 15:36:56,049 [40] INFO  umbraco.content - [T42/D6] Saved Xml to file.
+2015-06-23 15:37:49,569 [40] INFO  Umbraco.Core.Publishing.PublishingStrategy - [T59/D6] Content 'Home' with Id '1052' has been published.
+2015-06-23 15:37:53,623 [40] INFO  umbraco.content - [T42/D6] Save Xml to file...
+2015-06-23 15:37:53,631 [40] INFO  umbraco.content - [T42/D6] Saved Xml to file.
