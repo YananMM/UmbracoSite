@@ -10,8 +10,8 @@ namespace SimpleUmbraco.Controller
     public class ContactUsSurfaceController : Umbraco.Web.Mvc.SurfaceController
     {
         [System.Web.Http.HttpPost]
-        [System.Web.Http.ActionName("ContactUsForm")]
-        public ActionResult ContactUsForm(ContactUsModel model)
+        [System.Web.Http.ActionName("HandleContactSubmit")]
+        public ActionResult HandleContactSubmit(ContactUsRenderModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -19,6 +19,13 @@ namespace SimpleUmbraco.Controller
             }
             else
             {
+                using (var db = new ContactFormContext())
+                {
+                    db.Contacts.Add(new Contact(model.Username, model.PhoneNumber));
+                    db.SaveChanges();
+                    TempData["FormSuccess"] = true;
+                    TempData["Name"] = model.Username;
+                }
                 return CurrentUmbracoPage();
 
             }

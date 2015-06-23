@@ -1,14 +1,28 @@
-﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+﻿
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<SimpleUmbraco.Model.ContactUsRenderModel>
 
-@using System.Web.Mvc.Html
-@using ClientDependency.Core.Mvc
+@using SimpleUmbraco.Controller
 @using Umbraco.Web
-@using Umbraco.Web.Controllers
-@model ContactUsModel
 
-
-@using (Html.BeginUmbracoForm<ContactUsSurfaceController>("CreateComment"))
+@{
+    var success = TempData["FormSuccess"] != null;
+}
+@if (success)
 {
-    @Html.EditorFor(x => Model)
-    <input type="submit"/>
+    @* This message will show if RedirectOnSucces is set to false (default) *@
+    <p>Thanks for @TempData["Name"] information!</p>
+}
+else
+{
+ using (Html.BeginUmbracoForm<ContactUsSurfaceController>("HandleContactSubmit"))
+ {
+     @Html.ValidationSummary("ContactUsRenderModel", true)
+     @Html.LabelFor(m => Model.Username)
+     @Html.TextBoxFor(m => Model.Username)
+     <br/>
+     @Html.LabelFor(m => Model.PhoneNumber)
+     @Html.TextBoxFor(m => Model.PhoneNumber)
+     <br/>
+     <input type="submit" value="save form"/>
+ }
 }

@@ -1,4 +1,5 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+﻿@using SimpleUmbraco.Model
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "MasterPage.cshtml";
 }
@@ -6,9 +7,12 @@
     <div id="main" class="wrapper clearfix">
         <section>
             <p>@Umbraco.Field("pageContent")</p>
-        </section>  
-		<section>
-		@Umbraco.RenderMacro("ContactUs")
-		</section>
+        </section>
+        <section>
+            @*@Umbraco.RenderMacro("ContactUs")*@
+            @{
+                Html.RenderPartial("~/Views/MacroPartials/ContactUs.cshtml", new ContactUsRenderModel());
+            }
+        </section>
     </div> <!-- #main -->
 </div> <!-- #main-container -->
